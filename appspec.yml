@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/api
+        
+hooks:
+  AfterInstall:
+    - location: scripts/custom.sh
+      runas: root
+      timeout: 600
